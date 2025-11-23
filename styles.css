@@ -1,0 +1,84 @@
+
+body {
+  font-family: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+  background-color: #f9fafb;
+  color: #222;
+  margin: 20px;
+  padding: 3rem;
+  line-height: 1.5;
+ 
+}
+
+.flexBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards {
+ flex-direction: row;
+  flex-wrap: wrap;          /* allow items to move to next row when needed */
+  gap: 1rem;                /* space between cards */
+  justify-content: flex-start; /* align cards at the start, can also use center or space-around */
+}
+
+/* === Contact Container === */
+.contact {
+  background-color: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+
+/* Hover effect for interactivity */
+.contact:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* === Name Section === */
+.contact .name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.3rem;
+}
+
+/* === Address Section === */
+.contact .address {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+/* === Optional Layout Enhancements === */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Subtle divider between contacts */
+.contact:not(:last-child)::after {
+  content: "";
+  display: block;
+  margin-top: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+  .contact {
+    padding: 0.8rem 1rem;
+  }
+  .contact .name {
+    font-size: 1rem;
+  }
+  .contact .address {
+    font-size: 0.9rem;
+  }
+}
